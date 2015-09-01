@@ -1,0 +1,163 @@
+/*
+Theme Name:  stone-roots-wp
+Theme URI:   *** TBC ***
+Description: Stone Roots Wordpress Theme
+Version:     1.0
+Author:      Mike Cave 2015
+Author URI:  http://purelywebdesign.com
+*/
+
+/* Reset styles to ensure cross browser consistency */
+/*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+@font-face {
+    font-family: DolceVita;
+    src: url(fonts/dolcevita.ttf);
+}
+
+@font-face {
+    font-family: DolceVitaLight;
+    src: url(fonts/dolcevitalight.ttf);
+}
+
+@font-face {
+    font-family: DolceVitaBold;
+    src: url(fonts/dolcevitabold.ttf);
+}
+
+h1 {
+	font-family: DolceVita, "Lucida Console", "Courier New", monospace;
+	letter-spacing: .05em;
+  text-align: center;
+}
+
+h2 {
+  	font-family: DolceVitaLight, "Lucida Console", "Courier New", monospace;
+  	letter-spacing: .02em;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.container{
+    height: 100%;
+    margin: 0 auto;
+}
+
+.btn-centre{
+    text-align: center;
+}
+
+.ghost-button {
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    background: url("images/button-background.png") no-repeat;
+    font-family: DolceVita, "Lucida Console", "Courier New", monospace;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-out,
+                border-color 0.2s ease-out;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+
+.ghost-button span,
+.ghost-button:hover span,
+.ghost-button:hover span:hover,
+.ghost-button span:hover{
+  opacity: 1;
+}
+
+
+/* Homepage social icons */
+.icon-position{
+    width:100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+}
+
+.icon-position ul{
+  list-style: none;
+  padding: 0;
+}
+
+.icon-position ul li {
+  display: inline-block;
+}
+
+.icon-position a {
+  color: #fff;
+  transition: color 0.7s ease;
+}
+
+.twitter a:hover{
+    transition: color 0.5s ease;
+    color: #00aced;
+}
+
+.facebook a:hover{
+    transition: color 0.5s ease;
+    color: #3b5998;
+}
+
+.soundcloud a:hover{
+    transition: color 0.5s ease;
+    color: #ff7700;
+}
+
+.instagram a:hover{
+    transition: color 0.5s ease;
+    color: #517fa4;
+}
+
+/*@media only screen and (max-width : 899px) {
+  .icon-position a{
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width : 520px) {
+  .icon-position a{
+    font-size: 20px;
+  }
+}*/
+
+/*@media only screen and (min-width : 900px) {
+  .icon-position a{
+    font-size: 30px;
+  }
+}*/
+
+
+
+/* Small form mobile phones and down */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones  and down */
+@media only screen and (max-width : 480px) {
+
+}
