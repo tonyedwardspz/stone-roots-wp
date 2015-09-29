@@ -4,12 +4,12 @@
 	<h1 id="home-title">stone roots</h1>
 	<h2>Paint the town ep out now</h2>
 
-	<div class = "btn-centre">
+	<div class="button-wrapper">
 	  <a class="ghost-button" href="#"><span>Buy Now</span></a>
 	</div>
 
 	<!--FOOTER W/ SOCIAL ICONS-->
-	<div class = "icon-position">
+	<div class="icons">
 	  <ul>
 		  <li class="facebook">
 				<a href="https://www.facebook.com/StoneRootsUK" target="_blank" title="Stone Roots UK Facebook"><span class="fa-stack fa-2x"><i class="fa fa-facebook fa-stack-1x"></i></span></a>

@@ -29,6 +29,7 @@ h1 {
 	font-family: DolceVita, "Lucida Console", "Courier New", monospace;
 	letter-spacing: .05em;
   text-align: center;
+  margin-top: 30px;
 }
 
 h2 {
@@ -49,7 +50,7 @@ img {
     margin: 0 auto;
 }
 
-.btn-centre{
+.button-wrapper{
     text-align: center;
 }
 
@@ -90,7 +91,7 @@ img {
 
 
 /* Homepage social icons */
-.icon-position{
+.icons{
     width:100%;
     text-align: center;
     position: fixed;
@@ -98,16 +99,16 @@ img {
     margin-bottom: 20px;
 }
 
-.icon-position ul{
+.icons ul{
   list-style: none;
   padding: 0;
 }
 
-.icon-position ul li {
+.icons ul li {
   display: inline-block;
 }
 
-.icon-position a {
+.icons a {
   color: #fff;
   transition: color 0.7s ease;
 }
@@ -150,14 +151,111 @@ img {
   }
 }*/
 
+@media only screen and (min-width : 900px) {
+  h1 {
+    font-family: DolceVitaLight, "Lucida Console", "Courier New", monospace;
+  }
+
+  h2 {
+    font-size: 100%;
+  }
+
+  .button-wrapper {
+
+  }
+}
+
+/* Small tablets down */
+@media only screen and (max-width : 899px) {
+  h1 {
+    margin-top: 50px;
+  }
+
+  h2 {
+    margin-top: 80px;
+  }
+
+  .button-wrapper {
+    margin-top: 80px;
+  }
+
+  .icons a {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width : 800px) {
+  h1 {
+
+  }
+
+  h2 {
+
+  }
+
+  .button-wrapper {
+
+  }
+
+  .icons {
+
+  }
+
+  .icons ul li {
+    width: 24%;
+  }
+
+
+}
 
 
 /* Small form mobile phones and down */
 @media only screen and (max-width : 768px) {
+  h1 {
+    margin-top: 50px;
+  }
 
+  h2 {
+    margin-top: 80px;
+  }
+
+  .button-wrapper {
+    margin-top: 80px;
+  }
+
+  .icons {
+
+  }
+
+  .icons a {
+    font-size: 35px;
+  }
 }
 
-/* Extra Small Devices, Phones  and down */
+/* Extra Small Devices, Phones and down */
 @media only screen and (max-width : 480px) {
+  h1 {
 
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-size: 95%;
+  }
+
+  .button-wrapper {
+    margin-top: 40px;
+  }
+
+  .icons {
+    
+  }
+
+  .icons ul li {
+    width: 20%;
+  }
+
+  .icons a {
+    font-size: 15px;
+  }
 }

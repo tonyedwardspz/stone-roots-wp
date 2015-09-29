@@ -14,11 +14,11 @@ jQuery(window).resize(function() {
 // apply different image depending on screen width
 var applyBackstretchImage = function() {
 	if (window.innerWidth < 480) {
-		jQuery.backstretch("wp-content/themes/stone-roots/images/stone-roots-mobile.jpg");
-	} else if (window.innerWidth <= 768) {
-		jQuery.backstretch("wp-content/themes/stone-roots/images/stone-roots-tablet.jpg");
+		jQuery.backstretch("wp-content/themes/stone-roots-wp/images/stone-roots-mobile.jpg");
+	} else if (window.innerWidth <= 768 || isPortrait) {
+		jQuery.backstretch("wp-content/themes/stone-roots-wp/images/stone-roots-tablet.jpg");
 	} else {
-		jQuery.backstretch("wp-content/themes/stone-roots/images/stone-roots-home.jpg");
+		jQuery.backstretch("wp-content/themes/stone-roots-wp/images/stone-roots-home.jpg");
 	}
 }
 
