@@ -1,13 +1,13 @@
 // Called once the document has fully loaded
 jQuery(document).ready(function(){
-	applyBackstretchImage();
+	// applyBackstretchImage();
 	setFitText();
 });
 
 
 // Called when the browser window resizes
 jQuery(window).resize(function() {
-	applyBackstretchImage();
+	// applyBackstretchImage();
 });
 
 
