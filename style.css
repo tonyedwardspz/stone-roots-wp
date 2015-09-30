@@ -105,8 +105,10 @@ html {
     width:100%;
     text-align: center;
     position: fixed;
+    left: 0;
+    right: 0;
     bottom: 0;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 .icons ul{
