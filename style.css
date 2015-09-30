@@ -145,23 +145,33 @@ html {
     color: #517fa4;
 }
 
-/*@media only screen and (max-width : 899px) {
-  .icon-position a{
-    font-size: 5px;
-  }
+
+/* Events Page */
+.ik_fb_feed_item {
+
 }
 
-@media only screen and (max-width : 520px) {
-  .icon-position a{
-    font-size: 20px;
-  }
-}*/
+.ikfb_event_title {
 
-/*@media only screen and (min-width : 900px) {
-  .icon-position a{
-    font-size: 30px;
-  }
-}*/
+}
+
+.ikfb_event_date {
+
+}
+
+.ikfb_event_image {
+
+}
+
+.ikfb_event_description {
+
+}
+
+.ikfb_event_link {
+
+}
+
+/* Media Queries (To be refactored) */
 
 @media only screen and (min-width : 900px) {
   h1 {
