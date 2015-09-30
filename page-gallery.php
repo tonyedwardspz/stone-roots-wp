@@ -9,10 +9,10 @@ Template Name: gallery
 
 <?php get_header(); ?>
 
-<!-- put the wp gallery into the centre of the page -->
-
-<div class="gallery-mid">
-  <?php echo do_shortcode("[srizonfbgallery id=1]"); ?>
-</div>
+  <?php 
+  	if ( shortcode_exists( 'srizonfbgallery' ) ) {
+  		echo do_shortcode("[srizonfbgallery id=1]"); 
+  	}
+  ?>
 
 <?php get_footer(); ?>
