@@ -3,7 +3,7 @@
 
 <?php get_header(); ?>
 
-<!-- <!-- the gets and the LOOP -->
+<!-- the gets and the LOOP -->
 <div id="main" class ="group">
 
     <div id="blog" class ="left-col">

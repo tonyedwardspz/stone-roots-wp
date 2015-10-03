@@ -8,10 +8,13 @@ Template Name: events
 ?>
 <?php get_header(); ?>
 
+	<h1>Upcoming Events</h1>
+
 	<?php
-	if ( shortcode_exists( 'ik_fb_feed' ) ) {
-  		echo do_shortcode("[ik_fb_feed id=StoneRootsUK use_thumb=1 show_only_events=1 hide_feed_images=1 show_like_button=1 show_profile_picture=1 show_page_title=1 show_posted_by=0 show_date=1 use_human_timing=1]"); 
-	}
+	// if ( shortcode_exists( 'fts' ) ) {
+  	echo do_shortcode("[fts facebook id=StoneRootsUK type=events]");
+	// }
+	
   ?>
 
 <?php get_footer(); ?>
