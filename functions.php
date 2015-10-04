@@ -2,9 +2,14 @@
 define( 'TEMPPATH', get_bloginfo('stylesheet_directory'));
 define( 'IMAGES', TEMPPATH. "/images");
 
-add_theme_support('nav-menus');
+
+// Post thumbnails and sizes
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'blog-thumb', 780, 300, true );
 
 // Menu support
+add_theme_support('nav-menus');
+
 if ( function_exists('register_nav_menus')) {
   register_nav_menus(
   array(
@@ -58,5 +63,12 @@ function load_my_styes(){
   wp_enqueue_style( 'font-awesome' );
 }
 add_action( 'wp_enqueue_scripts', 'load_my_styes');
+
+
+// the_except() read more link
+function new_excerpt_more( $more ) {
+  return '<span class="more-wrapper"><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'your-text-domain' ) . '</a></span>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 ?>
