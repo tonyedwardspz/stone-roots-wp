@@ -1,10 +1,7 @@
 <?php
 /*
-Template Name: gallery
+Template Name: Image Gallery
 */
-// Events template for stone-roots gallery page
-
-
 ?>
 
 <?php get_header(); ?>

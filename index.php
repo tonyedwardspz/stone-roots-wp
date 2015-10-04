@@ -1,6 +1,3 @@
-
-<!-- Stone roots wordpress index -->
-
 <?php get_header(); ?>
 
 <div class="blog-wrapper">

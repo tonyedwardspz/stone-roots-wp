@@ -1,19 +1,17 @@
 
 <?php
 /*
-Template Name: events
+Template Name: Events Page
 */
-// Events template for stone-roots events page
-
 ?>
 <?php get_header(); ?>
 
 	<h1>Upcoming Events</h1>
 
 	<?php
-	// if ( shortcode_exists( 'fts' ) ) {
+	if ( shortcode_exists( 'fts facebook' ) ) {
   	echo do_shortcode("[fts facebook id=StoneRootsUK type=events]");
-	// }
+	}
 	
   ?>
 
