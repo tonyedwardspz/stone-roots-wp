@@ -1,15 +1,15 @@
 <?php
+
 define( 'TEMPPATH', get_bloginfo('stylesheet_directory'));
 define( 'IMAGES', TEMPPATH. "/images");
 
 
-// Post thumbnails and sizes
+// Post thumbnails
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'blog-thumb', 780, 300, true );
 
-// Menu support
-add_theme_support('nav-menus');
 
+// Menu support
 if ( function_exists('register_nav_menus')) {
   register_nav_menus(
   array(
@@ -17,25 +17,12 @@ if ( function_exists('register_nav_menus')) {
     )
   );
 }
-
-//sidebar support
-if ( function_exists( 'register_sidebar' ) ) {
-  register_sidebar( array (
-    'name' => __( 'Primary Sidebar', 'primary-sidebar' ),
-    'id' => 'primary-widget-area',
-    'description' => __( 'The primary widget area', 'dir' ),
-    'before_widget' => '<div class="widget">',
-    'after_widget' => "</div>",
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-  ) );
-}
+add_theme_support('nav-menus');
 
 
-//enqueue scripts, loading them in the footer
+// Enqueue scripts, loading them in the footer
 function load_my_script() {
-  if ( !is_admin() ) { // do not load scripts on admin page
-    //de register the built in jquery (it out of date)
+  if ( !is_admin() ) { 
     wp_deregister_script('jquery');
 
     //register all scripts
@@ -54,9 +41,9 @@ function load_my_script() {
 } 
 add_action( 'wp_enqueue_scripts', 'load_my_script' );
 
-// enqueue styles, loading them in the header
-function load_my_styes(){
 
+// Enqueue styles, loading them in the header
+function load_my_styes(){
   // Font Awesome
   wp_register_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css',  null, null, 'all' );
 
@@ -70,5 +57,6 @@ function new_excerpt_more( $more ) {
   return '<span class="more-wrapper"><a class="read-more" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More', 'your-text-domain' ) . '</a></span>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 
 ?>
