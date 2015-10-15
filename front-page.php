@@ -5,7 +5,7 @@
 	<h2>Paint the town ep out now</h2>
 
 	<div class="button-wrapper">
-	  <a class="ghost-button" href="#"><span>Buy Now</span></a>
+	  <a class="ghost-button" href="https://itunes.apple.com/gb/album/paint-the-town-ep/id1009874712"><span>Buy Now</span></a>
 	</div>
 
 	<!--FOOTER W/ SOCIAL ICONS-->
