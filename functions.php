@@ -59,4 +59,23 @@ function new_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 
+// Jetpack fallback open graph image
+function jetpack_og_custom_image( $media, $post_id, $args ) {
+    if ( $media ) {
+        return $media;
+    } else {
+        $permalink = get_permalink( $post_id );
+        $url = apply_filters( 'jetpack_photon_url', echo IMAGES.'/sr-fallback.jpg' );
+     
+        return array( array(
+            'type'  => 'image',
+            'from'  => 'custom_fallback',
+            'src'   => esc_url( $url ),
+            'href'  => $permalink,
+        ) );
+    }
+}
+add_filter( 'jetpack_images_get_images', 'jetpack_og_custom_image', 10, 3 );
+
+
 ?>
