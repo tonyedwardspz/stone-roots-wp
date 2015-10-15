@@ -27,7 +27,7 @@ function load_my_script() {
 
     //register all scripts
     // wp_register_script($handle, $src, $deps, $ver, $in_footer);
-    wp_register_script('jquery', get_template_directory_uri().'/scripts/jquery-1.11.3.min.js', null, null, true);
+    wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js', null, null, true);
     wp_register_script('fittext', get_template_directory_uri().'/scripts/fittext.js', array('jquery'), null, true);
     wp_register_script('bs', get_template_directory_uri().'/scripts/backstrech.js', array('jquery'), null, true);
     wp_register_script('myScript', get_template_directory_uri().'/scripts/script.js', array('jquery'), null, true);
@@ -45,7 +45,7 @@ add_action( 'wp_enqueue_scripts', 'load_my_script' );
 // Enqueue styles, loading them in the header
 function load_my_styes(){
   // Font Awesome
-  wp_register_style( 'font-awesome', get_template_directory_uri().'/css/font-awesome.min.css',  null, null, 'all' );
+  wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 
   wp_enqueue_style( 'font-awesome' );
 }

@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
   <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
+  <meta name="google-site-verification" content="eDfqABJ1MGkpoB4HldaE2MdSv1wMyjJvXw83foSxv3E" />
+
 </head>
 
 <body>
