@@ -2,6 +2,8 @@
 
 define( 'TEMPPATH', get_bloginfo('stylesheet_directory'));
 define( 'IMAGES', TEMPPATH. "/images");
+define( 'STYLE', TEMPPATH. "/css");
+define( 'SCRIPT', TEMPPATH. "/scripts");
 
 
 // Post thumbnails
@@ -19,15 +21,41 @@ if ( function_exists('register_nav_menus')) {
 }
 add_theme_support('nav-menus');
 
+// Load CDN jquery is there is a connection
+function getJqueryURL() {
+	$googleCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js";
+	$test_url = @fopen($googleCDN,'r');
+
+	if ($test_url !== false){
+		return $googleCDN;
+	} else {
+		return SCRIPT. '/jquery-1.11.3.min.js';;
+	}
+}
+
+// Load CDN Font Awesome if there is a connection
+function getFontAwesomeURL() {
+	$fontAwesomeCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+	$test_url = @fopen($fontAwesomeCDN,'r');
+
+	if ($test_url !== false) {
+		return $fontAwesomeCDN;
+	} else {
+		return STYLE. '/font-awesome.min.css';
+	}
+}
+
 
 // Enqueue scripts, loading them in the footer
 function load_my_script() {
-  if ( !is_admin() ) { 
+  if ( !is_admin() ) {
     wp_deregister_script('jquery');
+
+    $jqueryURL = getJqueryURL();
 
     //register all scripts
     // wp_register_script($handle, $src, $deps, $ver, $in_footer);
-    wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js', null, null, true);
+    wp_register_script('jquery', $jqueryURL, null, '1.11.3d', true);
     wp_register_script('fittext', get_template_directory_uri().'/scripts/fittext.js', array('jquery'), null, true);
     wp_register_script('bs', get_template_directory_uri().'/scripts/backstrech.js', array('jquery'), null, true);
     wp_register_script('myScript', get_template_directory_uri().'/scripts/script.js', array('jquery'), null, true);
@@ -38,15 +66,17 @@ function load_my_script() {
     wp_enqueue_script('bs');
     wp_enqueue_script('myScript');
   }
-} 
+}
 add_action( 'wp_enqueue_scripts', 'load_my_script' );
 
 
 // Enqueue styles, loading them in the header
 function load_my_styes(){
   // Font Awesome
-  wp_enqueue_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+  $fontAwesomeURL = getFontAwesomeURL();
 
+  // Font Awesome
+  wp_register_style( 'font-awesome', $fontAwesomeURL, null, '4.1.0', 'all');
   wp_enqueue_style( 'font-awesome' );
 }
 add_action( 'wp_enqueue_scripts', 'load_my_styes');
@@ -66,7 +96,7 @@ function jetpack_og_custom_image( $media, $post_id, $args ) {
     } else {
         $permalink = get_permalink( $post_id );
         $url = apply_filters( 'jetpack_photon_url', IMAGES.'/sr-fallback-img.jpg' );
-     
+
         return array( array(
             'type'  => 'image',
             'from'  => 'custom_fallback',
