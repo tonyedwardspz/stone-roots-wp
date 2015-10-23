@@ -65,7 +65,7 @@ function jetpack_og_custom_image( $media, $post_id, $args ) {
         return $media;
     } else {
         $permalink = get_permalink( $post_id );
-        $url = apply_filters( 'jetpack_photon_url', echo IMAGES.'/sr-fallback.jpg' );
+        $url = apply_filters( 'jetpack_photon_url', IMAGES.'/sr-fallback-img.jpg' );
      
         return array( array(
             'type'  => 'image',
