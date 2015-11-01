@@ -1,4 +1,4 @@
-		 </div> 
+		 </div>
     <?php wp_footer(); ?>
 
     <script>
@@ -10,13 +10,19 @@
 				applyBackStretch();
 			});
 
+			console.log(window.location);
+
 			function applyBackStretch() {
+				var path = window.location.pathname;
+
 				if (window.innerWidth < 480) {
-						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-mobile.jpg");
+					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-mobile.jpg");
 				} else if (window.innerWidth <= 768 || isPortrait()) {
-						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-tablet.jpg");
+					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-tablet.jpg");
+				} else if (path === "/wordpress/" || path === "/"){
+					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/desktop-landscape.jpg");
 				} else {
-						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-home.jpg");
+					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/whitewall-background.jpg");
 				}
 			}
 
