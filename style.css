@@ -313,14 +313,13 @@ html {
 
 #shiftnav-toggle-main-button .fa{
   font-size: 30px;
-  -webkit-text-stroke: 1px #eee;
-  color: white;
-  text-shadow:
-      1px 1px 0 #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
+  color: black;
+   text-shadow:
+     1px 0px 0 #eee,
+     -1px -1px 0 #eee,
+     1px -1px 0 #eee,
+     -1px  1px 0 #eee,
+     1px  1px 0 #eee;
 }
 
 
