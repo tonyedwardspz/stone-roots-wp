@@ -33,11 +33,11 @@ var isPortrait = function() {
 // Determins if touch features are available.
 // Returns true/false
 var isTouchDevice = function() {
-  return 'ontouchstart' in window || 'onmsgesturechange' in window; 
+  return 'ontouchstart' in window || 'onmsgesturechange' in window;
 }
 
 
 // Apply fit-text to title
 var setFitText = function() {
-	jQuery("#home-title").fitText();
+	jQuery("#home-title").fitText(1.0, {maxFontSize: '70px'});
 }
