@@ -21,6 +21,7 @@ if ( function_exists('register_nav_menus')) {
 }
 add_theme_support('nav-menus');
 
+
 // Load CDN jquery is there is a connection
 function getJqueryURL() {
 	$googleCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js";
@@ -32,6 +33,7 @@ function getJqueryURL() {
 		return SCRIPT. '/jquery-1.11.3.min.js';;
 	}
 }
+
 
 // Load CDN Font Awesome if there is a connection
 function getFontAwesomeURL() {
@@ -106,6 +108,5 @@ function jetpack_og_custom_image( $media, $post_id, $args ) {
     }
 }
 add_filter( 'jetpack_images_get_images', 'jetpack_og_custom_image', 10, 3 );
-
 
 ?>
