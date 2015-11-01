@@ -12,15 +12,34 @@
 
 			function applyBackStretch() {
 				var path = window.location.pathname;
+				var width = window.innerWidth;
 
-				if (window.innerWidth < 480) {
-					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-mobile.jpg");
-				} else if (window.innerWidth <= 768 || isPortrait()) {
-					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-tablet.jpg");
-				} else if (path === "/wordpress/" || path === "/"){
-					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/desktop-landscape.jpg");
+				if (path === "/wordpress/" || path === "/"){
+					// Were on the homepage, show the band pic
+					if (width < 480) {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-mobile.jpg");
+					} else if (width <= 768 || isPortrait()) {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/stone-roots-tablet.jpg");
+					} else if (width < 1000) {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/desktop-landscape-1000.jpg");
+					} else if (width < 1500){
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/desktop-landscape-1500.jpg");
+					} else if (width < 2000) {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/desktop-landscape-2000.jpg");
+					} else {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/desktop-landscape-3000.jpg");
+					}
 				} else {
-					jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/whitewall-background.jpg");
+					// Were not on the homepage, display the white wall background
+					if (width < 1000) {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/whitewall-background-1000.jpg");
+					} else if (width < 1500){
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/whitewall-background-1500.jpg");
+					} else if (width < 2000) {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/whitewall-background-2000.jpg");
+					} else {
+						jQuery.backstretch("<?php echo get_stylesheet_directory_uri(); ?>/images/whitewall-background-3000.jpg");
+					}
 				}
 			}
 
