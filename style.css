@@ -1,9 +1,9 @@
 /*
 Theme Name:  stone-roots-wp
-Theme URI:   *** TBC ***
+Theme URI:   http://stoneroots.co.uk/
 Description: Stone Roots Wordpress Theme
 Version:     1.0
-Author:      Mike Cave 2015
+Author:      Tony Edwards & Mike Cave 2015
 Author URI:  http://purelywebdesign.com
 */
 
@@ -72,29 +72,28 @@ html {
   width: 200px;
   padding: 8px;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #0099FF;
   text-align: center;
   outline: none;
   text-decoration: none;
   border-radius: 5px;
-  background: url("images/button-background.png") no-repeat;
+  background-color: #0066CC;
   font-family: DolceVita, "Lucida Console", "Courier New", monospace;
-  opacity: 0.6;
-  transition: opacity 0.2s ease-out,
-  border-color 0.2s ease-out;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-out,
+  border-color 0.3s ease-out;
+  letter-spacing: 2px;
 }
 
 .ghost-button:hover,
 .ghost-button:active,
 .fts-jal-fb-see-more:hover,
 .blog-item .read-more:hover {
-  background-color: #fff; /* fallback */
-  background-color: rgba(255, 255, 255, 0.4);
-  border-color: #fff; /* fallback */
-  border-color: rgba(255, 255, 255, 0.4);
-  opacity: 0.9;
-  transition: opacity 0.3s ease-in,
-  border-color 0.3s ease-in;
+  background-color: #0099FF; /* fallback */
+  background-color: rgba(0, 153, 255, 0.9);
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in,
+  border-color 0.5s ease-in;
 }
 
 .ghost-button span,
@@ -254,7 +253,7 @@ html {
 /*Title*/
 .fts-jal-fb-name {
   font-family: DolceVita, "Lucida Console", "Courier New", monospace;
-  
+
 }
 
 .fts-events-list-wrap a.fts-jal-fb-name {
@@ -318,7 +317,7 @@ html {
   color: white;
   text-shadow:
       1px 1px 0 #000,
-      -1px -1px 0 #000,  
+      -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
       1px 1px 0 #000;

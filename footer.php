@@ -10,8 +10,6 @@
 				applyBackStretch();
 			});
 
-			console.log(window.location);
-
 			function applyBackStretch() {
 				var path = window.location.pathname;
 
