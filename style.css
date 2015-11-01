@@ -30,6 +30,7 @@ h1 {
 	letter-spacing: .05em;
   text-align: center;
   margin-top: 30px;
+  margin-bottom: 46px;
 }
 
 h2 {
@@ -69,7 +70,7 @@ html {
 .fts-jal-fb-see-more,
 .blog-item .read-more {
   display: inline-block;
-  width: 200px;
+  width: 160px;
   padding: 8px;
   color: #fff;
   border: 1px solid #0099FF;
@@ -105,14 +106,19 @@ html {
 
 
 /* Homepage social icons */
+
+#home-title {
+
+}
+
 .icons{
   width:100%;
   text-align: center;
-  position: fixed;
+  /*position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 20px auto;*/
 }
 
 .icons ul{
@@ -122,6 +128,7 @@ html {
 
 .icons ul li {
   display: inline-block;
+  font-size: 24px;
 }
 
 .icons a {
@@ -354,7 +361,7 @@ html {
   }
 
   .icons a {
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -402,7 +409,7 @@ html {
   }
 
   .icons a {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 
