@@ -9,8 +9,8 @@ Template Name: Events Page
 	<h1>Upcoming Events</h1>
 
 	<?php
-	if ( shortcode_exists( 'fts facebook' ) ) {
-  	echo do_shortcode("[fts facebook id=StoneRootsUK type=events]");
+	if ( shortcode_exists( 'fts_facebook' ) ) {
+  	echo do_shortcode("[fts_facebook id=StoneRootsUK type=events]");
 	}
 	
   ?>
