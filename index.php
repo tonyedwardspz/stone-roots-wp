@@ -16,7 +16,7 @@
           }
       ?>
 
-      <?php the_excerpt('Read More...'); ?>
+      <?php the_content(); ?>
     </div>
 
   <?php endwhile; else: ?>

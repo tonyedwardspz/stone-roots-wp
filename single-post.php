@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-<div class="blog-wrapper">
+<div class="blog-wrapper SINGLE-POST">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
