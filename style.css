@@ -3,7 +3,7 @@ Theme Name:  stone-roots-wp
 Theme URI:   http://stoneroots.co.uk/
 Description: Stone Roots Wordpress Theme
 Version:     1.0
-Author:      Tony Edwards & Mike Cave 2015
+Author:      Tony Edwards & Mike Cave
 Author URI:  http://purelywebdesign.com
 */
 
@@ -25,6 +25,10 @@ Author URI:  http://purelywebdesign.com
   src: url(fonts/dolcevitabold.ttf);
 }
 
+body {
+  padding-top: 4em;
+}
+
 h1 {
 	font-family: DolceVita, "Lucida Console", "Courier New", monospace;
 	letter-spacing: .05em;
@@ -37,6 +41,18 @@ h2 {
  font-family: DolceVitaLight, "Lucida Console", "Courier New", monospace;
  letter-spacing: .02em;
  text-align: center;
+}
+
+.roots-font {
+  font-family: DolceVita, "Lucida Console", "Courier New", monospace;
+	letter-spacing: .05em;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 25px;
+}
+
+p {
+  line-height: 1.5;
 }
 
 img {
@@ -109,12 +125,13 @@ html {
 
 #home-title {
   font-size: 40px;
+  /*margin-top: 1em;*/
 }
 
 .icons{
   width:100%;
   text-align: center;
-  /*position: fixed;
+/*  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -250,6 +267,10 @@ html {
   .fts-jal-fb-picture  {
     width: 100%;
     display: block;
+  }
+
+  #home-title {
+    margin-top: 0;
   }
 
 }
@@ -440,3 +461,70 @@ html {
     font-size: 15px;
   }
 }
+
+
+
+/* NEW MENU */
+
+body {
+  overflow: hidden;
+}
+
+.menu  {
+  position: absolute;
+  top:0;
+  right:-280px;
+  font-size: 24px;
+  line-height: 44px;
+  align-items: center;
+  margin-top: 30vh;
+  z-index: 1999;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: 0;
+  width:330px;
+  margin-bottom: 5px;
+  transition: margin-left 1s, background-color 1s, opacity 1s;
+  padding: 5px;
+  height: 44px;
+  line-height: 44px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;  
+  background-color: #eee;
+  opacity: 0.5;
+  border: 1px solid white;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  width: 100%;
+}
+
+.menu li:hover {
+  right: 0;
+  margin-left: -200px;
+  opacity: 0.8;
+  transition: margin-left 1s, background-color 1s, opacity 1s;
+}
+
+.menu i {
+  margin-right: 1em;
+  margin-left: 0.4em;
+  align-items: center;
+  font-size: 1em;
+}
+
+.fontawesome-text {
+  font-size: 1em;
+}
+
