@@ -125,17 +125,11 @@ html {
 
 #home-title {
   font-size: 40px;
-  /*margin-top: 1em;*/
 }
 
 .icons{
   width:100%;
   text-align: center;
-/*  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0 auto 20px auto;*/
 }
 
 .icons ul{
@@ -243,10 +237,6 @@ html {
   clear: none;
 }
 
-.fts-jal-fb-picture img {
-
-}
-
 .fts-jal-fb-message {
   width: 50%;
   float: left;
@@ -272,7 +262,6 @@ html {
   #home-title {
     margin-top: 0;
   }
-
 }
 
 
@@ -286,26 +275,6 @@ html {
 
 .fts-events-list-wrap a.fts-jal-fb-name {
   font-size: 20px;
-}
-
-.fts-fb-event-time {
-
-}
-
-.fts-fb-location {
-
-}
-
-.fts-fb-location-title {
-
-}
-
-.fts-fb-get-directions {
-
-}
-
-.jal-fb-description {
-
 }
 
 .fts-jal-single-fb-post {
@@ -328,30 +297,7 @@ html {
 }
 
 
-
-/* Off canvas menu */
-
-#shiftnav-toggle-main {
-  background: none;
-}
-
-.shiftnav-main-toggle-content a {
-  display: none;
-}
-
-#shiftnav-toggle-main-button .fa{
-  font-size: 30px;
-  color: black;
-   text-shadow:
-     1px 0px 0 #eee,
-     -1px -1px 0 #eee,
-     1px -1px 0 #eee,
-     -1px  1px 0 #eee,
-     1px  1px 0 #eee;
-}
-
-
-/* Media Queries (To be refactored) */
+/* Media Queries (TODO: refactor) */
 
 @media only screen and (min-width : 900px) {
   h1 {
@@ -360,10 +306,6 @@ html {
 
   h2 {
     font-size: 1.5em;
-  }
-
-  .button-wrapper {
-
   }
 }
 
@@ -387,27 +329,9 @@ html {
 }
 
 @media only screen and (max-width : 800px) {
-  h1 {
-
-  }
-
-  h2 {
-
-  }
-
-  .button-wrapper {
-
-  }
-
-  .icons {
-
-  }
-
   .icons ul li {
     width: 24%;
   }
-
-
 }
 
 
@@ -425,10 +349,6 @@ html {
     margin-top: 80px;
   }
 
-  .icons {
-
-  }
-
   .icons a {
     font-size: 25px;
   }
@@ -436,10 +356,6 @@ html {
 
 /* Extra Small Devices, Phones and down */
 @media only screen and (max-width : 480px) {
-  h1 {
-
-  }
-
   h2 {
     margin-top: 40px;
     font-size: 95%;
@@ -447,10 +363,6 @@ html {
 
   .button-wrapper {
     margin-top: 40px;
-  }
-
-  .icons {
-
   }
 
   .icons ul li {
@@ -461,8 +373,6 @@ html {
     font-size: 15px;
   }
 }
-
-
 
 /* NEW MENU */
 
@@ -527,4 +437,3 @@ body {
 .fontawesome-text {
   font-size: 1em;
 }
-
