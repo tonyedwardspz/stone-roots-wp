@@ -43,6 +43,16 @@ h2 {
  text-align: center;
 }
 
+h2 a {
+  color: #BE48DB;
+  transition: all 0.5s;
+}
+
+h2 a:hover {
+  color: #A327C2;
+  transition: all 0.5s;
+}
+
 .roots-font {
   font-family: DolceVita, "Lucida Console", "Courier New", monospace;
 	letter-spacing: .05em;
