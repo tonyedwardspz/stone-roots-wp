@@ -187,9 +187,6 @@ html {
 .blog-item {
   max-width: 800px;
   margin: 0 auto 30px auto;
-  background-color: #fff; /* fallback */
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
 }
 
